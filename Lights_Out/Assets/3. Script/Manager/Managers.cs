@@ -12,7 +12,6 @@ public class Managers : MonoBehaviour
 
     InputManager _input = new InputManager();
     public static InputManager Input { get { return _instance._input; } }
-    
 
     private void Awake()
     {
