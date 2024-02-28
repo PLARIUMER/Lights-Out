@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float speed;
+    [SerializeField] private float speed, jumpPower;
 
     private Rigidbody2D playerRigid;
 
@@ -12,18 +12,16 @@ public class PlayerController : MonoBehaviour
     {
         playerRigid = GetComponent<Rigidbody2D>();
 
-
+        Managers.Input.KeyAction -= OnKeyboard;
+        Managers.Input.KeyAction += OnKeyboard; 
     }
 
-    void Start() => Init();
+    private void Start() => Init();
 
-    void Update()
+    private void OnKeyboard()
     {
         PlayerMove();
-    }
 
-    private void Keyboard()
-    {
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Jump();
@@ -39,6 +37,14 @@ public class PlayerController : MonoBehaviour
 
     private void Jump()
     {
-        
+        RaycastHit2D groundHit = Physics2D.Raycast(transform.position, Vector3.down, 1, LayerMask.GetMask("Ground"));
+
+        if (groundHit.collider != null)
+        {
+            //animator.Play("Jump");
+
+            playerRigid.velocity = new Vector2(0f, jumpPower);
+        }
+        Debug.DrawRay(transform.position, Vector3.down, new Color(0, 1, 0));
     }
 }
