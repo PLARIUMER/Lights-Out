@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Managers : MonoBehaviour
 {
-    static Managers instance;
-    public static Managers Instance { get { return instance; } }
+    static Managers _instance;
+    public static Managers Instance { get { return _instance; } }
 
+    GameManager _game = new GameManager();
+    public static GameManager Game { get { return _instance._game; } }
     private void Awake()
     {
         Init();
@@ -14,9 +16,9 @@ public class Managers : MonoBehaviour
 
     private void Init()
     {
-        if(instance == null)
+        if(_instance == null)
         {
-            instance = gameObject.GetComponent<Managers>();
+            _instance = gameObject.GetComponent<Managers>();
             DontDestroyOnLoad(gameObject);
         }
     }
