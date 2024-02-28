@@ -35,12 +35,14 @@ public class MonsterController : MonoBehaviour
         Die,
     }
 
-    protected Action OnIdle;
-    protected Action OnMove;
-    protected Action OnAttack;
-    protected Action OnDie;
+    protected Action OnIdle = null;
+    protected Action OnMove = null;
+    protected Action OnAttack = null;
+    protected Action OnDie = null; 
 
-
+    protected GameObject _target;
+    protected Rigidbody2D rigid;
+    protected Animator anim;
     void Start()
     {
         Init();    
@@ -48,7 +50,9 @@ public class MonsterController : MonoBehaviour
 
     protected virtual void Init()
     {
-
+        _target = Managers.Game.player;
+        rigid = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
