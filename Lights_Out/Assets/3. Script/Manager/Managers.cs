@@ -8,11 +8,13 @@ public class Managers : MonoBehaviour
     public static Managers Instance { get { return _instance; } }
 
 
-    //GameManager _game = new GameManager();
-    //public static GameManager Game { get { return _instance._game; } }
+    GameManager _game = new GameManager();
+    public static GameManager Game { get { return _instance._game; } }
+
+
 
     InputManager _input = new InputManager();
-    public static InputManager Input { get { return Instance._input; } }
+    public static InputManager Input { get { return _instance._input; } }
 
 
     private void Awake()
