@@ -9,9 +9,15 @@ public class Managers : MonoBehaviour
 
     GameManager _game = new GameManager();
     public static GameManager Game { get { return _instance._game; } }
+
     private void Awake()
     {
         Init();
+    }
+
+    private void Update()
+    {
+        
     }
 
     private void Init()
