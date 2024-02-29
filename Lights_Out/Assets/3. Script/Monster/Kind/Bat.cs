@@ -48,7 +48,7 @@ public class Bat : MonsterController
             state = State.Idle;
             return; 
         }
-
+        GetComponent<SpriteRenderer>().flipX = dir.x > 0 ? true : false; 
         transform.position += dir * _stat.Speed * Time.deltaTime;
         if((desPos - transform.position).magnitude < 0.1f)
         {
@@ -61,6 +61,7 @@ public class Bat : MonsterController
     private void UpdateFight()
     {
         Vector3 dir = movementDirectionSolver.GetDirectionToMove(steeringBehaviors, aiData);
+        GetComponent<SpriteRenderer>().flipX = _target.transform.position.x - transform.position.x > 0 ? true : false;
         transform.position += dir * _stat.Speed * Time.deltaTime;
 
         if ((_target.transform.position - transform.position).magnitude > _stat.seekRange + 3f)
@@ -75,7 +76,7 @@ public class Bat : MonsterController
             if (!canAtk)
                 return;
             atkCur = 0;
-            Debug.Log($"{name}ÀÇ °ø°Ý");
+            state = State.Attack;
         }
         else
             atkCur += Time.deltaTime;
@@ -84,7 +85,9 @@ public class Bat : MonsterController
 
     private void Attack()
     {
-
+        Vector3 dir = _target.transform.position - transform.position;
+        GameObject go = Instantiate(Resources.Load<GameObject>("Prefabs/Blood"),transform.position,Quaternion.identity);
+        go.GetComponent<Rigidbody2D>().velocity = dir;
     }
 
     private void UpdateDie()

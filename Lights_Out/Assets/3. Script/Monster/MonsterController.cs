@@ -28,6 +28,9 @@ public class MonsterController : MonoBehaviour
                     monsterAi.Fight();
                     anim.Play("Move");
                     break;
+                case State.Attack:
+                    anim.Play("Attack");
+                    break;
                 case State.Die:
                     OnDie.Invoke();
                     break;
@@ -40,6 +43,7 @@ public class MonsterController : MonoBehaviour
         Idle,
         Move,
         Fight,
+        Attack,
         Die,
     }
 
@@ -96,5 +100,10 @@ public class MonsterController : MonoBehaviour
                 OnFight.Invoke();
                 break;
         }
+    }
+
+    void EndAtk()
+    {
+        state = State.Fight;
     }
 }
