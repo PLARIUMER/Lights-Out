@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 30
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -71,7 +71,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -121,7 +121,322 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Bat Idle - Copy_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 25
+        width: 70
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 680196d1780701e44a327a698a6ef65f
+      internalID: -1185690251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat Idle - Copy_1
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 27
+        width: 70
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1befc42dfffab344e83bd80a0818ae77
+      internalID: 597261188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat Idle - Copy_2
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 28
+        width: 70
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feaebdbd786e9764e821e292bac213d6
+      internalID: -1283428807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat Idle - Copy_3
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 32
+        width: 70
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aef0011a22a001c43bfe4156140057d2
+      internalID: -430538474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat Idle - Copy_4
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 31
+        width: 70
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 173f6f447d169f04bb95ae6cb3089cba
+      internalID: 274454078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat Idle - Copy_5
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 28
+        width: 70
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5735ba03cfc05cc4abf348bee92894bb
+      internalID: -584983319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat Idle - Copy_6
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 27
+        width: 70
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fa7c2a968afb0c4db5b9de6d4c9b945
+      internalID: 1962995187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat Idle - Copy_7
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 26
+        width: 70
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abb5cb5cd3322ec4d8f18da5fe67df5b
+      internalID: 1536969817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat Idle - Copy_8
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 31
+        width: 70
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41938d488ef38924da743632df77ae06
+      internalID: -643736736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat Idle - Copy_9
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 31
+        width: 70
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f83225022e9a7fc4fbabe7d16b6d27b0
+      internalID: 698336988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat Idle - Copy_10
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 27
+        width: 70
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62f0cf83ab827894b8706477b02cbc09
+      internalID: -989706488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat Idle - Copy_11
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 27
+        width: 70
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5accc3aa55528e3479e8eec0d3c93a2c
+      internalID: 1135571114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat Idle - Copy_12
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 27
+        width: 70
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93da83c3e80da2643afc0e345069ae19
+      internalID: 1011350617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat Idle - Copy_13
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 27
+        width: 70
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c4eff2e88a60fd4d8ac77dc15513c04
+      internalID: -483367766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat Idle - Copy_14
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 31
+        width: 70
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 701e56f954042334b95c2d6679255392
+      internalID: -1715149074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +447,22 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Bat Idle - Copy_0: -1185690251
+      Bat Idle - Copy_1: 597261188
+      Bat Idle - Copy_10: -989706488
+      Bat Idle - Copy_11: 1135571114
+      Bat Idle - Copy_12: 1011350617
+      Bat Idle - Copy_13: -483367766
+      Bat Idle - Copy_14: -1715149074
+      Bat Idle - Copy_2: -1283428807
+      Bat Idle - Copy_3: -430538474
+      Bat Idle - Copy_4: 274454078
+      Bat Idle - Copy_5: -584983319
+      Bat Idle - Copy_6: 1962995187
+      Bat Idle - Copy_7: 1536969817
+      Bat Idle - Copy_8: -643736736
+      Bat Idle - Copy_9: 698336988
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
