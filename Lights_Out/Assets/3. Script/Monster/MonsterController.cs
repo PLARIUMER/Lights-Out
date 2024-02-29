@@ -12,13 +12,21 @@ public class MonsterController : MonoBehaviour
         set
         {
             _state = value;
+
+            if (GetComponent<Animator>() == null)
+                return;
             switch(_state)
             {
                 case State.Idle:
+                    idleCur = 0;
+                    anim.Play("Idle");
                     break;
                 case State.Move:
+                    anim.Play("Move");
                     break;
-                case State.Attack:
+                case State.Fight:
+                    monsterAi.Fight();
+                    anim.Play("Move");
                     break;
                 case State.Die:
                     OnDie.Invoke();
@@ -31,18 +39,36 @@ public class MonsterController : MonoBehaviour
     {
         Idle,
         Move,
-        Attack,
+        Fight,
         Die,
     }
 
     protected Action OnIdle = null;
     protected Action OnMove = null;
     protected Action OnAttack = null;
-    protected Action OnDie = null; 
+    protected Action OnFight = null;
+    protected Action OnDie = null;
 
+    protected float idleCur;
+    [HideInInspector]
+    public float atkCur;
+    protected Vector3 desPos;
+    protected Vector3 spawnPos;
+
+    [SerializeField]
     protected GameObject _target;
     protected Rigidbody2D rigid;
+    protected MonsterStat _stat;
     protected Animator anim;
+
+    [Header("Steering")]
+    [SerializeField] protected MonsterAI monsterAi;
+    [SerializeField] protected ContextSolver movementDirectionSolver;
+    [SerializeField] protected List<SteeringBehavior> steeringBehaviors;
+    [SerializeField] protected AIData aiData;
+    public bool canRun;
+    [HideInInspector]
+    public bool canAtk = true; 
     void Start()
     {
         Init();    
@@ -50,7 +76,8 @@ public class MonsterController : MonoBehaviour
 
     protected virtual void Init()
     {
-        _target = Managers.Game.player;
+        _stat = GetComponent<MonsterStat>();
+        spawnPos = transform.position;
         rigid = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
@@ -65,8 +92,8 @@ public class MonsterController : MonoBehaviour
             case State.Move:
                 OnMove.Invoke();
                 break;
-            case State.Attack:
-                OnAttack.Invoke();
+            case State.Fight:
+                OnFight.Invoke();
                 break;
         }
     }
