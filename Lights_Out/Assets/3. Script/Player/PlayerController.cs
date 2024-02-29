@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float speed, jumpPower, dashPower;
-
     private Rigidbody2D playerRigid;
     private bool isDash = true;
 
@@ -23,8 +22,8 @@ public class PlayerController : MonoBehaviour
     {
         PlayerMove();
 
-        if (Input.GetKeyDown(KeyCode.Space)) Jump();
-        if (Input.GetMouseButtonDown(1)) Dash();
+        if (Input.GetKeyDown(KeyCode.Space)) PlayerJump();
+        if (Input.GetMouseButtonDown(1)) PlayerDash();
     }
 
     private void PlayerMove()
@@ -34,7 +33,7 @@ public class PlayerController : MonoBehaviour
         transform.Translate(x * speed * Time.deltaTime, 0f, 0f);
     }
 
-    private void Jump()
+    private void PlayerJump()
     {
         RaycastHit2D groundHit = Physics2D.Raycast(transform.position, Vector3.down, 1, LayerMask.GetMask("Ground"));
 
@@ -47,7 +46,7 @@ public class PlayerController : MonoBehaviour
         Debug.DrawRay(transform.position, Vector3.down, new Color(0, 1, 0));
     }
 
-    private void Dash()
+    private void PlayerDash()
     {
         if (isDash)
         {
