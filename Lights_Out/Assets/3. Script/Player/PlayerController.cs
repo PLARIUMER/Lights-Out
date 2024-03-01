@@ -54,9 +54,10 @@ public class PlayerController : MonoBehaviour
             playerRigid.gravityScale = 0f;
 
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector2 dir = mousePos - (Vector2)transform.position;
+            Vector2 dir = (mousePos - (Vector2)transform.position).normalized;
 
-            playerRigid.AddForce(transform.up = dashPower * dir.normalized, ForceMode2D.Impulse);
+            playerRigid.velocity = Vector2.zero;
+            playerRigid.AddForce(dir * dashPower, ForceMode2D.Impulse);
 
             StartCoroutine(DashGravity());
         }
