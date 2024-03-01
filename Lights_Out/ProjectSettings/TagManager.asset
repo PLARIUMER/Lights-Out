@@ -11,12 +11,12 @@ TagManager:
   - Ground
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Obstacle
+  - Enemy
+  - LightObstacles
+  - LightSources
+  - AmbientLight
   - 
   - 
   - 

@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 30
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -71,7 +71,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -121,7 +121,322 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Bat Move-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 25
+        width: 70
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84e7c1ebff4224746a2b1c40f4e44fa5
+      internalID: 32012838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat Move-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 26
+        width: 70
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fd8241e64a2f3140aa896a7745d7313
+      internalID: 1234829545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat Move-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 26
+        width: 70
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a9b19a73a88ceb45b990a2fb010a309
+      internalID: -1805523028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat Move-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 25
+        width: 70
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7760d8616559a944bbc9462b7df747d1
+      internalID: -2000789555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat Move-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 19
+        width: 70
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2c8d043ab6be65408603eb1190e5bee
+      internalID: -893071156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat Move-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 19
+        width: 70
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1b36d839bc21a04987ad6915e64bba3
+      internalID: 469809744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat Move-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 26
+        width: 70
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3558ce867bf8244cae92cc7f3530c01
+      internalID: 1689874489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat Move-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 25
+        width: 70
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31274cdd196ee31409ccb88eaa709634
+      internalID: -623313268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat Move-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 24
+        width: 70
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e1c12377b65bdd4cb8b548cb6345015
+      internalID: -1128656565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat Move-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 19
+        width: 70
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ebab8ee3d095af4f881e983c94ca7d1
+      internalID: 2054251037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat Move-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 26
+        width: 70
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67c33626d456cd3459a2251b24cfc33f
+      internalID: -911013544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat Move-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 26
+        width: 70
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0545c26bdc59bf94885aa215937ca279
+      internalID: 1840194244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat Move-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 23
+        width: 70
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebe7c0ffc1fa00f489991ddc0f6cd195
+      internalID: -695953902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat Move-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 24
+        width: 70
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2771dda9987d17449629255e3dc9444
+      internalID: 666805781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat Move-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 19
+        width: 70
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51b98f55c64dbba4599b3dc8ab74183c
+      internalID: 1759622630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +447,41 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Bat Move-Sheet_0: 32012838
+      Bat Move-Sheet_1: 1234829545
+      Bat Move-Sheet_10: -911013544
+      Bat Move-Sheet_11: 1840194244
+      Bat Move-Sheet_12: -695953902
+      Bat Move-Sheet_13: 666805781
+      Bat Move-Sheet_14: 1759622630
+      Bat Move-Sheet_15: 774233805
+      Bat Move-Sheet_16: -156031461
+      Bat Move-Sheet_17: 522464967
+      Bat Move-Sheet_18: -1854896655
+      Bat Move-Sheet_19: 2058273974
+      Bat Move-Sheet_2: -1805523028
+      Bat Move-Sheet_20: 223488981
+      Bat Move-Sheet_21: -1412986999
+      Bat Move-Sheet_22: 969759948
+      Bat Move-Sheet_23: 100561758
+      Bat Move-Sheet_24: 50828708
+      Bat Move-Sheet_25: 569071874
+      Bat Move-Sheet_26: 2119760608
+      Bat Move-Sheet_27: 715624322
+      Bat Move-Sheet_28: 1480250067
+      Bat Move-Sheet_29: 2090937495
+      Bat Move-Sheet_3: -2000789555
+      Bat Move-Sheet_30: -1636185277
+      Bat Move-Sheet_31: 943166273
+      Bat Move-Sheet_32: -1250079448
+      Bat Move-Sheet_33: -611689073
+      Bat Move-Sheet_4: -893071156
+      Bat Move-Sheet_5: 469809744
+      Bat Move-Sheet_6: 1689874489
+      Bat Move-Sheet_7: -623313268
+      Bat Move-Sheet_8: -1128656565
+      Bat Move-Sheet_9: 2054251037
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
