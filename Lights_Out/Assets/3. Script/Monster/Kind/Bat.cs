@@ -85,9 +85,9 @@ public class Bat : MonsterController
 
     private void Attack()
     {
-        Vector3 dir = _target.transform.position - transform.position;
+        Vector3 dir = (_target.transform.position - transform.position).normalized;
         GameObject go = Instantiate(Resources.Load<GameObject>("Prefabs/Blood"),transform.position,Quaternion.identity);
-        go.GetComponent<Rigidbody2D>().velocity = dir;
+        go.GetComponent<Rigidbody2D>().velocity = dir*4;
     }
 
     private void UpdateDie()
