@@ -30,15 +30,6 @@ AnimationClip:
         weightedMode: 0
         inWeight: 0
         outWeight: 0
-      - serializedVersion: 3
-        time: 0.5833333
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -84,18 +75,25 @@ AnimationClip:
       value: {fileID: -184879279, guid: fe73e83efa784654398b27b94d39a7bf, type: 3}
     - time: 0.45
       value: {fileID: -1386135183, guid: fe73e83efa784654398b27b94d39a7bf, type: 3}
-    - time: 0.46666667
-      value: {fileID: -933062752, guid: fe73e83efa784654398b27b94d39a7bf, type: 3}
-    - time: 0.51666665
-      value: {fileID: 743838399, guid: fe73e83efa784654398b27b94d39a7bf, type: 3}
-    - time: 0.53333336
-      value: {fileID: 1155199014, guid: fe73e83efa784654398b27b94d39a7bf, type: 3}
-    - time: 0.56666666
-      value: {fileID: 836660044, guid: fe73e83efa784654398b27b94d39a7bf, type: 3}
-    - time: 0.5833333
-      value: {fileID: 836660044, guid: fe73e83efa784654398b27b94d39a7bf, type: 3}
     attribute: m_Sprite
     path: AttackEffect
+    classID: 212
+    script: {fileID: 0}
+    flags: 2
+  - serializedVersion: 2
+    curve:
+    - time: 0
+      value: {fileID: 32012838, guid: ff8b0f9a78ad6724092755d832cefa15, type: 3}
+    - time: 0.11666667
+      value: {fileID: 1234829545, guid: ff8b0f9a78ad6724092755d832cefa15, type: 3}
+    - time: 0.2
+      value: {fileID: -1805523028, guid: ff8b0f9a78ad6724092755d832cefa15, type: 3}
+    - time: 0.31666666
+      value: {fileID: -2000789555, guid: ff8b0f9a78ad6724092755d832cefa15, type: 3}
+    - time: 0.45
+      value: {fileID: -893071156, guid: ff8b0f9a78ad6724092755d832cefa15, type: 3}
+    attribute: m_Sprite
+    path: 
     classID: 212
     script: {fileID: 0}
     flags: 2
@@ -124,6 +122,15 @@ AnimationClip:
       isPPtrCurve: 1
       isIntCurve: 0
       isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 0
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     pptrCurveMapping:
     - {fileID: 843830468, guid: fe73e83efa784654398b27b94d39a7bf, type: 3}
     - {fileID: -1755244947, guid: fe73e83efa784654398b27b94d39a7bf, type: 3}
@@ -142,17 +149,17 @@ AnimationClip:
     - {fileID: 1630147464, guid: fe73e83efa784654398b27b94d39a7bf, type: 3}
     - {fileID: -184879279, guid: fe73e83efa784654398b27b94d39a7bf, type: 3}
     - {fileID: -1386135183, guid: fe73e83efa784654398b27b94d39a7bf, type: 3}
-    - {fileID: -933062752, guid: fe73e83efa784654398b27b94d39a7bf, type: 3}
-    - {fileID: 743838399, guid: fe73e83efa784654398b27b94d39a7bf, type: 3}
-    - {fileID: 1155199014, guid: fe73e83efa784654398b27b94d39a7bf, type: 3}
-    - {fileID: 836660044, guid: fe73e83efa784654398b27b94d39a7bf, type: 3}
-    - {fileID: 836660044, guid: fe73e83efa784654398b27b94d39a7bf, type: 3}
+    - {fileID: 32012838, guid: ff8b0f9a78ad6724092755d832cefa15, type: 3}
+    - {fileID: 1234829545, guid: ff8b0f9a78ad6724092755d832cefa15, type: 3}
+    - {fileID: -1805523028, guid: ff8b0f9a78ad6724092755d832cefa15, type: 3}
+    - {fileID: -2000789555, guid: ff8b0f9a78ad6724092755d832cefa15, type: 3}
+    - {fileID: -893071156, guid: ff8b0f9a78ad6724092755d832cefa15, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.59999996
+    m_StopTime: 0.46666667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -181,15 +188,6 @@ AnimationClip:
         weightedMode: 0
         inWeight: 0
         outWeight: 0
-      - serializedVersion: 3
-        time: 0.5833333
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -204,6 +202,13 @@ AnimationClip:
   m_Events:
   - time: 0
     functionName: Attack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.46666667
+    functionName: EndAtk
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
