@@ -11,6 +11,11 @@ public class MonsterController : MonoBehaviour
         get { return _state; }
         set
         {
+            if((_state == State.Idle || _state == State.Move) && value == State.Fight)
+            {
+                sign.SetActive(false);
+                sign.SetActive(true);
+            }
             _state = value;
 
             if (GetComponent<Animator>() == null)
@@ -72,7 +77,10 @@ public class MonsterController : MonoBehaviour
     [SerializeField] protected AIData aiData;
     public bool canRun;
     [HideInInspector]
-    public bool canAtk = true; 
+    public bool canAtk = true;
+
+    [Header("Sign")]
+    public GameObject sign;
     void Start()
     {
         Init();    
