@@ -130,6 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   atkCur: 0
+  desPos: {x: 0, y: 0, z: 0}
   _target: {fileID: 0}
   monsterAi: {fileID: 2621925823420552363}
   movementDirectionSolver: {fileID: 532076199579988980}
@@ -139,6 +140,7 @@ MonoBehaviour:
   aiData: {fileID: 5952202808820015889}
   canRun: 1
   canAtk: 0
+  isLost: 0
   sign: {fileID: 0}
   obstacleLayer:
     serializedVersion: 2
@@ -639,6 +641,7 @@ MonoBehaviour:
   playerLayerMask:
     serializedVersion: 2
     m_Bits: 64
+  monsterAi: {fileID: 2621925823420552363}
   targetRechedThreshold: 0.5
 --- !u!1 &8715401435916600512
 GameObject:

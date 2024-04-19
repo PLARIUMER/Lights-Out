@@ -6,7 +6,7 @@ using UnityEngine;
 public class MonsterController : MonoBehaviour
 {
     State _state = State.Idle;
-    protected State state
+    public State state
     {
         get { return _state; }
         set
@@ -18,8 +18,6 @@ public class MonsterController : MonoBehaviour
             }
             _state = value;
 
-            if (GetComponent<Animator>() == null)
-                return;
             switch(_state)
             {
                 case State.Idle:
@@ -43,7 +41,7 @@ public class MonsterController : MonoBehaviour
         }
     }
 
-    protected enum State
+    public enum State
     {
         Idle,
         Move,
@@ -61,7 +59,8 @@ public class MonsterController : MonoBehaviour
     protected float idleCur;
     [HideInInspector]
     public float atkCur;
-    protected Vector3 desPos;
+    [HideInInspector]
+    public Vector3 desPos;
     protected Vector3 spawnPos;
 
     [SerializeField]
@@ -78,6 +77,8 @@ public class MonsterController : MonoBehaviour
     public bool canRun;
     [HideInInspector]
     public bool canAtk = true;
+    [HideInInspector]
+    public bool isLost;
 
     [Header("Sign")]
     public GameObject sign;
@@ -108,6 +109,8 @@ public class MonsterController : MonoBehaviour
                 OnFight.Invoke();
                 break;
         }
+
+        Debug.Log(state);
     }
 
     void EndAtk()

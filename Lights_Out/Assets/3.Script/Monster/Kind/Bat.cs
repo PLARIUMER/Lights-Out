@@ -8,20 +8,20 @@ public class Bat : MonsterController
     protected override void Init()
     {
         base.Init();
-        OnIdle -= UpdateIdle; OnIdle += UpdateIdle;
-        OnMove -= UpdateMove; OnMove += UpdateMove;
-        OnFight -= UpdateFight; OnFight += UpdateFight;
-        OnDie -= UpdateDie; OnDie += UpdateDie;
+        OnIdle += UpdateIdle;
+        OnMove += UpdateMove;
+        OnFight += UpdateFight;
+        OnDie += UpdateDie;
     }
 
     private void UpdateIdle()
     {
-        if ((_target.transform.position - transform.position).magnitude < 5)
+        movementDirectionSolver.GetDirectionToMove(steeringBehaviors, aiData);
+        if (!isLost)
         {
             state = State.Fight;
             return;
         }
-
         if (idleCur >= 2.5f)
         {
             desPos = spawnPos + new Vector3(Random.Range(-2f,2f),Random.Range(-2f,2f));
@@ -34,12 +34,12 @@ public class Bat : MonsterController
 
     private void UpdateMove()
     {
-        if ((_target.transform.position - transform.position).magnitude < 5)
+        movementDirectionSolver.GetDirectionToMove(steeringBehaviors, aiData);
+        if (!isLost)
         {
             state = State.Fight;
             return;
         }
-
         Vector3 dir = (desPos - transform.position).normalized;
         RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, 1,obstacleLayer);
         Debug.DrawRay(transform.position, dir, Color.magenta,1);
@@ -61,10 +61,11 @@ public class Bat : MonsterController
     private void UpdateFight()
     {
         Vector3 dir = movementDirectionSolver.GetDirectionToMove(steeringBehaviors, aiData);
-        GetComponent<SpriteRenderer>().flipX = _target.transform.position.x - transform.position.x > 0 ? true : false;
+       if(!isLost) GetComponent<SpriteRenderer>().flipX = _target.transform.position.x - transform.position.x > 0 ? true : false;
+       else GetComponent<SpriteRenderer>().flipX = dir.x > 0 ? true : false;
         transform.position += dir * _stat.Speed * Time.deltaTime;
 
-        if ((_target.transform.position - transform.position).magnitude > _stat.seekRange + 3f)
+        if (isLost && Vector2.Distance(transform.position, desPos) < 1f)
         {
             state = State.Idle;
             monsterAi.CancelFight();
