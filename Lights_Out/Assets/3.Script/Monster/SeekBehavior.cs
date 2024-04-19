@@ -9,6 +9,7 @@ public class SeekBehavior : SteeringBehavior
     [SerializeField] MonsterStat stat;
     [SerializeField]
     private LayerMask obstaclesLayerMask, playerLayerMask;
+    [SerializeField] MonsterAI monsterAi;
     [SerializeField] private float targetRechedThreshold = 0.5f;
     bool reachedLastTarget = true;
 
@@ -60,12 +61,14 @@ public class SeekBehavior : SteeringBehavior
                 {
                     directionToTarget = Vector2.zero;
                     controller.canAtk = true;
-                   
+                    controller.isLost = false;
                 }
                 else
                 {
                     directionToTarget = (targetPositionCached - (Vector2)transform.position);
                     controller.canAtk = false;
+                    controller.isLost = true;
+                    controller.desPos = targetPositionCached;
                 }
             }
         }
@@ -96,9 +99,9 @@ public class SeekBehavior : SteeringBehavior
                 }
             }
         }
+      
 
-
-        for(int i = 0;i<interest.Length;i++)
+        for (int i = 0;i<interest.Length;i++)
         {
             float result = Vector2.Dot(directionToTarget.normalized, Directions.eightDirections[i]);
 
