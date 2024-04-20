@@ -6,12 +6,13 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float speed, jumpPower, dashPower;
     private Rigidbody2D playerRigid;
+    SpriteRenderer sprite;
     private bool isDash = true;
 
     private void Init()
     {
         playerRigid = GetComponent<Rigidbody2D>();
-
+        sprite = GetComponent<SpriteRenderer>();
         Managers.Input.KeyAction -= OnKeyboard;
         Managers.Input.KeyAction += OnKeyboard; 
     }
@@ -31,6 +32,8 @@ public class PlayerController : MonoBehaviour
         float x = Input.GetAxisRaw("Horizontal");
 
         transform.Translate(x * speed * Time.deltaTime, 0f, 0f);
+
+        sprite.flipX = x < 0;
     }
 
     private void PlayerJump()
